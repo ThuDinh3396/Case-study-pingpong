@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ung dung chuyen doi tien te</title>
+</head>
+<body>
+    <input id="amount" type="text">Amount</input>
+    <select name="currency" id="menhgiacanchuyen">
+        <option value="23000">VNĐ</option>
+        <option value="1">USD</option>
+        <option value="32">BATH</option>
+      </select>
+    <p>To currency</p> 
+    <select name="currency" id="menhgiachuyensang">
+        <option value="23000">VNĐ</option>
+        <option value="1">USD</option>
+        <option value="32">BATH</option>
+      </select>
+      <button onclick="convert()" type="button">Convert</button>
+      <p id="phatngon"></p>
+</body>
+<script>
+    function convert() {
+    let menhgiacanchuyen = Number(document.getElementById("menhgiacanchuyen").value);
+    let menhgiachuyensang = Number(document.getElementById("menhgiachuyensang").value);
+    let sotiencanchuyen = Number(document.getElementById("amount").value);
+    let sotienchuyenra = sotiencanchuyen*menhgiachuyensang/menhgiacanchuyen
+    document.getElementById("phatngon").innerHTML = sotienchuyenra;
+    }
+</script>
+</html>

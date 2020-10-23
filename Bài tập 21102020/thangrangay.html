@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tinh ngay trong thang</title>
+</head>
+<body>
+    Nhập Tháng
+    <input id="month" type="text"></input>
+    <button onclick="Tinhsongay()">Tính số ngày</button>
+    <p id="songay"></p>
+    <script>
+        function Tinhsongay () {
+            var thang = Number(document.getElementById("month").value);
+                switch (thang) {
+                case 1:
+                case 3:
+
+                    document.getElementById("songay").innerHTML = "31 ngay";
+                
+                break;
+                
+                
+            }
+        }
+    
+    </script>
+</body>
+
+</html>

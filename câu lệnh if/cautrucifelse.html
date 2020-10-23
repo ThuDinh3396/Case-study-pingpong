@@ -7,13 +7,13 @@
 </head>
 <body>
    <script>
-       let matkhau = prompt('Nhập mật khẩu:')
-        let matkhaudung = 1;
-        if (matkhau == matkhaudung) {
-            alert('Bạn đã nhập đúng!');
-        }
-        else {
-            alert('Sai mất rồi! Thử lại nhé');
+       let userName = prompt("Who's there?", '');
+       if (userName == 'Admin') {
+           //code vào đây
+        } else if (userName == null) {
+            alert('Canceled');
+        } else {
+            alert("I don't know you");
         }
    </script>
 </body>
