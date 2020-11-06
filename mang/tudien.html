@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="Nhap" placeholder="Nhập từ cần tìm">
+</input>
+<button Onclick=Tim()>Dịch</button>
+<p id="Dich"></p>
+    <script>
+        function Tim(){
+        let tiengviet = ["cho","meo","lon","ga"]
+        let tienganh = ["dog","cat","pig","chicken"]
+        let tim = document.getElementById("Nhap").value;
+        //let tim = prompt("Nhap");
+        for (let i=0;i<=tiengviet.length;i++) {
+            if (tiengviet[i]==tim) {
+                //document.write(tienganh[i]);
+               document.getElementById("Dich").innerHTML =  tienganh[i];
+               break
+            } 
+             else {
+                document.getElementById("Dich").innerHTML =  "Không tìm thấy";
+             }
+        }
+
+    }
+    </script>
+</body>
+</html>
