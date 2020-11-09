@@ -5,9 +5,10 @@
     </head>
     <body>
         <script>
-            // Lấy giá trị
-            let num = prompt("Nhập vào một số");
-            // Kiểm tra số chẵn hay lẻ
+            function Nhapvao1so() {
+                let input = Number(prompt("Nhập vào một số"))
+                return input
+            }
             if (num % 2 == 0){
                 document.write(num + ' là số chẵn');
             }
