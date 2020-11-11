@@ -14,18 +14,25 @@
         function VeHinhChuNhat() {
             document.getElementById('canva').innerText = ''
             let height = Number(document.getElementById('height').value)
-            let width = Number(document.getElementById('width').value)
+            
            for(let i=0; i<height; i+=2) {
-               Ve
-               console.log('ve mot dong: ' + i)
-               for(let j=0; j<width; j++) {
-                   console.log('ve mot cot')
-                   document.getElementById('canva').innerText += '*'
-               }
-               document.getElementById('canva').innerText += '\n'  
-           }
+            VeMotDong()
+            }
             console.log("ket thuc: " + i)
-        }
+            }
+            function VeMotDong() {
+               console.log('ve mot dong: ' + i)
+               let width = Number(document.getElementById('width').value)
+               for(let j=0; j<width; j++) {
+                VeMotDiem() 
+                }
+               document.getElementById('canva').innerText += '\n'  
+                }
+
+                function VeMotDiem() {
+                   console.log('ve mot diem')
+                   document.getElementById('canva').innerText += '*'
+                }     
     </script>
    
 </body>
