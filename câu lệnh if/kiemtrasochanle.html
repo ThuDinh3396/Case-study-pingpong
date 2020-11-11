@@ -4,20 +4,29 @@
         <title>Kiem tra so chan le</title>
         <script>
             function Nhap_vao_mot_so() {
-                let input = Number(prompt("Nhập vào một số"))
+                let input = Number(prompt("Nhập vào một số"));
                 return input
             }
         </script>
     </head>
     <body>
         <script>
-            if (num % 2 == 0){
-                document.write(num + ' là số chẵn');
+            let Nhapvaomotso = Nhap_vao_mot_so()
+
+            result()
+
+            function result() {
+                Nhapvaomotso % 2 == 0
+            if (answer) {
+            result = Nhapvaomotso + ' là số chẵn';
+            } else {
+            result = Nhapvaomotso + ' là số lẻ';
             }
-            else{
-                document.write(num + ' là số lẻ');
-            }
-             
+        return result;
+    }
+    let theAnswer = processConfirm(confirmAnswer);
+    alert(theAnswer);
+        
         </script>
     </body>
 </html>

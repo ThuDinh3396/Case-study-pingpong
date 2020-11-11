@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="canva"></pre>
+    <input id='height' type=number value="5" ></input>
+    <input id='width' type=number value="6" ></input>
+    <button onclick="">Draw</button>
+    <script>
+        function VeHinhChuNhat() {
+            document.getElementById('canva').innerText = ''
+            let height = Number(document.getElementById('height').value)
+            let width = Number(document.getElementById('width').value)
+           for(let i=0; i<height; i+=2) {
+               Ve
+               console.log('ve mot dong: ' + i)
+               for(let j=0; j<width; j++) {
+                   console.log('ve mot cot')
+                   document.getElementById('canva').innerText += '*'
+               }
+               document.getElementById('canva').innerText += '\n'  
+           }
+            console.log("ket thuc: " + i)
+        }
+    </script>
+   
+</body>
+</html>
