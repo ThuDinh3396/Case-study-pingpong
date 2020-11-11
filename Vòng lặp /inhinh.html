@@ -9,26 +9,26 @@
     <pre id="canva"></pre>
     <input id='height' type=number value="5" ></input>
     <input id='width' type=number value="6" ></input>
-    <button onclick="">Draw</button>
+    <button onclick="VeHinhChuNhat()">Draw</button>
     <script>
         function VeHinhChuNhat() {
             document.getElementById('canva').innerText = ''
             let height = Number(document.getElementById('height').value)
-            
-           for(let i=0; i<height; i+=2) {
+           for(let i=0; i<height; i+=1) {
             VeMotDong()
             }
-            console.log("ket thuc: " + i)
+            console.log('ket thuc')
             }
+
             function VeMotDong() {
-               console.log('ve mot dong: ' + i)
+               console.log('ve mot dong')
                let width = Number(document.getElementById('width').value)
                for(let j=0; j<width; j++) {
                 VeMotDiem() 
                 }
                document.getElementById('canva').innerText += '\n'  
                 }
-
+                
                 function VeMotDiem() {
                    console.log('ve mot diem')
                    document.getElementById('canva').innerText += '*'
