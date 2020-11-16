@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <tr>
+        <td>Số thứ nhất</td>
+        <td><input type="Number" id="soThuNhat"></td>
+    </tr>
+    <tr>
+        <td>Số thứ hai</td>
+        <td><input type="Number" id="soThuHai"></td>
+    </tr>
+    <tr>
+        <td>Số thứ ba</td>
+        <td><input type="Number" id="soThuBa"></td>
+    </tr>
+    <script>
+        let a = nhapSoThuNhat()
+        let b = nhapSoThuHai()
+        let c = nhapSoThuBa()
+        let delta = tinhDelta(a, b, c)
+        let result1 = timNghiemThuNhat(a, b, c, delta);
+        let result2 = timNghiemThuHai(a, b, c, delta);
+        if (delta < 0) {
+            alert("Phương trình vô nghiệm")
+        }
+        else {
+            if (delta > 0) {
+                alert("2 Nghiệm của phương trình là " + result1 + " và " + result2)
+            }
+            else {
+                alert("Phương trình có nghiệm kép là " + result1)
+            }
+        }
+
+        function timNghiemThuNhat(a, b, c, del) {
+            return (-b + Math.sqrt(del)) / (2 * a)
+        }
+
+        function timNghiemThuHai(a, b, c, del) {
+            return (-b - Math.sqrt(del)) / (2 * a)
+        }
+
+        function nhapSoThuNhat(){
+            return Number(document.getElementById("soThuNhat").value)
+        }
+
+        function nhapSoThuHai(){
+            return Number(document.getElementById("soThuHai").value)
+        }
+
+        function nhapSoThuBa(){
+            return Number(document.getElementById("soThuBa").value)
+        }
+        
+        function tinhDelta(a, b, c){
+            return b * b - 4 * a * c
+            //delta = nhapSoThuHai() * nhapSoThuHai() - 4 * nhapSoThuNhat() * nhapSoThuBa()
+        //}
+    </script>
+</body>
+</html>
