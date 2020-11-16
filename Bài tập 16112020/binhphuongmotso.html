@@ -9,21 +9,14 @@
 
 <body>
     <script>
-        let x
-let binhphuong
-        nhapSo()
-        binhPhuong()
-
-        function nhapSo() {
-            let x = Number(prompt("Nhập vào một số:"));
-        }
-        function binhPhuong() {
-            let binhphuong = x*x;
-            alert('Bình phương của một số là:' + binhphuong);
-        }
+        let number = Number(prompt("Nhập số cần tính"));
+        let d = tinhbinhphuong(number);
+        alert("Bình phương là " + d)
         
-           
-        
+        function tinhbinhphuong(number) {
+            let binhphuong = number * number;
+            return binhphuong
+        }
     </script>
 </body>
 
