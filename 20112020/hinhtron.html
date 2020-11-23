@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let c = {
+            radius: 5,
+            color: "red",
+            chuvi: function (){
+                console.log("Chu vi la " + this.radius * 2);
+            },
+            detail: function () {
+                console.log("radius la " + this.radius);
+                console.log("color la " + this.color);
+            }
+        };
+
+        c.detail()
+        c.chuvi()
+
+</script>
+</body>
+
+</html>
