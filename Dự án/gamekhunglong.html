@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        <div id="game"></div>
+        function khunglong(image, top, left, size) {
+            this.image = image;
+            this.top = top;
+            this.left = left;
+            this.size = size;
+            this.getkhunglongElement = function () {
+                return '<img width="' + this.size + '"' +
+                    ' height="' + this.size + '"' +
+                    ' src="' + this.image + '"' +
+                    ' style="top: ' + this.top + 'px; left:' + this.left + 'px;position:absolute;" />';
+            }
+
+            this.moveRight = function () {
+                this.left += 20;
+                console.log('ok: ' + this.left);
+            }
+
+        }
+       let khunglong = new khunglong('', 20, 30, 200);
+
+        function start() {
+            if (khunglong.left < window.innerWidth - khunglong.size) {
+                khunglong.moveRight();
+            }
+            document.getElementById('game').innerHTML = khunglong.getHeroElement();
+            setTimeout(start, 500)
+        }
+
+        start();
+    </script>
+</body>
+
+</html>
