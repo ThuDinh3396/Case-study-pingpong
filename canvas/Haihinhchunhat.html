@@ -26,6 +26,7 @@
             gameContext.fillStyle = '#FA4B2A';
             gameContext.fillRect(20, carYPosition, 150, 100);
         }
+
         function drawCar2() {
             gameContext.beginPath();
             gameContext.fillStyle = "Blue";
@@ -51,13 +52,17 @@
             let isTouchRight = carXPosition + 150 > 800;
             if (isTouchLeft || isTouchRight) {
                 xDistance = -xDistance;
+            }
+            let isTouchTop2 = carYPosition2 < 0;
+            let isTouchBottom2 = carYPosition2 + 100 > 600;
+            if (isTouchTop2 || isTouchBottom2) {
                 yDistance2 = -yDistance2;
             }
             carXPosition += xDistance;
             carYPosition2 += yDistance2;
             drawCar2();
         }
-        setInterval(moveCar2, 1);
+        setInterval(moveCar2, 5);
     </script>
 </body>
 </html>
