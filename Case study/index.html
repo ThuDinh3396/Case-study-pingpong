@@ -1,31 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        canvas {
-            border: 1px solid #d3d3d3;
-            background-color: hsl(162, 87%, 56%);
-        }
-    </style>
+
 </head>
+
 <body onload="startGame()">
+    <canvas id="DemoCanvas" width="500" height="600"></canvas>
     <script>
-        function startGame() {
-            myGameArea.start();
+        var canvas = document.getElementById("DemoCanvas");
+        if (canvas.getContext) {
+            var ctx = canvas.getContext('2d');
+            ctx.fillStyle = '#fa4b2a';    // color of fill
+            ctx.fillRect(10, 40, 140, 160); // create rectangle  
         }
-        
-        var myGameArea = {
-            canvas : document.createElement("canvas"),
-            start : function() {
-                this.canvas.width = 560;
-                this.canvas.height = 320;
-                this.context = this.canvas.getContext("2d");
-                document.body.insertBefore(this.canvas, document.body.childNodes[0]);
-            }
-        }
-        </script>
+    </script>
 </body>
+
 </html>
