@@ -7,60 +7,54 @@
 </head>
 <body>
     <canvas id="game" width="800" height="600" style="border: 3px solid #000000"></canvas>
-
     <script>
         let gameContext = document.getElementById("game").getContext("2d");
         gameContext.beginPath();
-        gameContext.fillStyle = '#fa4b2a';
+        gameContext.fillStyle = '#FA4B2A';
         gameContext.fillRect(20, 20, 150, 100);
         let carYPosition = 20;
+        let carYPosition2 = 20;
 
         let gameContext2 = document.getElementById("game").getContext("2d");
         gameContext2.beginPath();
         gameContext2.fillStyle = 'blue';
         gameContext2.fillRect(20, 20, 150, 100);
         let carXPosition = 20;
-        
+
         function drawCar() {
             gameContext.beginPath();
-            gameContext.fillStyle = '#fa4b2a';
+            gameContext.fillStyle = '#FA4B2A';
             gameContext.fillRect(20, carYPosition, 150, 100);
         }
         function drawCar2() {
             gameContext.beginPath();
             gameContext.fillStyle = "Blue";
-            gameContext.fillRect(carXPosition, carYPosition, 150, 100);
+            gameContext.fillRect(carXPosition, carYPosition2, 150, 100);
         }
-        
         let yDistance = 1;
         function moveCar() {
             gameContext.clearRect(20, carYPosition, 150, 100);
-
             let isTouchTop = carYPosition < 0;
             let isTouchBottom = carYPosition + 100 > 600;
             if (isTouchTop || isTouchBottom) {
                 yDistance = -yDistance;
             }
-
             carYPosition += yDistance;
             drawCar();
         }
         setInterval(moveCar, 5);
-
         let xDistance = 1;
         let yDistance2 = 1;
         function moveCar2() {
-            gameContext.clearRect(carXPosition, carYPosition, 150, 100);
-
+            gameContext.clearRect(carXPosition, carYPosition2, 150, 100);
             let isTouchLeft = carXPosition < 0;
             let isTouchRight = carXPosition + 150 > 800;
             if (isTouchLeft || isTouchRight) {
                 xDistance = -xDistance;
-                yDistance = -yDistance;
+                yDistance2 = -yDistance2;
             }
-
             carXPosition += xDistance;
-            carYPosition += yDistance2;
+            carYPosition2 += yDistance2;
             drawCar2();
         }
         setInterval(moveCar2, 1);
