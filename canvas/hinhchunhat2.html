@@ -22,12 +22,13 @@
                 this.x += this.vx
                 this.y += this.vy
             }
-            this.draw = function () {
+            this.draw = function (color) {
                 this.ctx.beginPath();
-                this.ctx.fillStyle = '#fa4b2a';
+                this.ctx.fillStyle = color;
                 this.ctx.fillRect(this.x, this.y, this.w, this.h)
             }
         }
+        
     </script>
 </head>
 <body>
@@ -35,12 +36,15 @@
         <script>
             let ctx = document.getElementById("game").getContext("2d")
             let car = new Car(20, 20, 4, 4, 150, 100, ctx)
+            let car2 = new Car(50, 120, 4, 4, 150, 100, ctx)
             timeLoop = 1000 / 30
             setInterval(gameStart, timeLoop)
             function gameStart() {
                 car.ctx.clearRect(0, 0, 800, 600)
                 car.move()
-                car.draw()
+                car2.move()
+                car.draw("blue")
+                car2.draw('#fa4b2a')
             }
         </script>
 </body>
